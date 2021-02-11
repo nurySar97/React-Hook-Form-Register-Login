@@ -35,6 +35,11 @@
 }
 
 
+.login__input-with-icon--active {
+    border: 1px solid #1890ff;
+}
+
+
 .login__label {
     display:inline-flex;
     align-items: center;
