@@ -64,7 +64,7 @@
     background-color: rgba(27, 34, 51,.9);
     transition: all .35s linear;
     color: rgba(85,101,126,.5);
-    opacity: 0;
+    transform: scale(0);
 
     top: -10%;
     left: 37px;
@@ -72,7 +72,7 @@
 
 
 .login__label--active::before {
-    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -97,6 +97,7 @@
 
 .login__input:focus::placeholder {
     color: transparent;
+    transform: scale(0);
 }
 
 

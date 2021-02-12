@@ -62,14 +62,14 @@
     background-color: rgba(27, 34, 51,.9);
     transition: all .35s linear;
     color: rgba(85,101,126,.5);
-    opacity: 0;
+    transform: scale(0);
 
     top: -10%;
     left: 37px;
 }
 
 .register__label--active::before {
-    opacity: 1;
+    transform: scale(1);
 }
 
 .register__input {
@@ -110,6 +110,7 @@
 
 .register__input:focus::placeholder {
     color: transparent;
+    transform: scale(0);
 }
 
 .register__input-error {

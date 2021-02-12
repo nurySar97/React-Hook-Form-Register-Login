@@ -1,11 +1,6 @@
 import React from 'react';
 
-const PasswordItem = ({
-    setIsActive,
-    isActive,
-    register,
-    errors
-}) => {
+const PasswordItem = ({ setIsActive, isActive, register, errors }) => {
     return (
         <div className='login__item'>
             <div className={`login__input-with-icon ${isActive.password && 'login__input-with-icon--active'}`}>

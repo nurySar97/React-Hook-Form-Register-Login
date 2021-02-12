@@ -1,16 +1,11 @@
 import React from 'react'
 
-const UsernameItem =  ({
-    setIsActive,
-    isActive,
-    register,
-    errors
-}) => {
+const UsernameItem = ({ setIsActive, isActive, register, errors }) => {
     return (
         <div className='register__item'>
 
             <div className={`register__input-with-icon ${isActive.name && 'register__input-with-icon--active'}`}>
-                
+
                 <label
                     className={`register__label ${isActive.name && 'register__label--active'}`}
                     data-label='Enter username'
@@ -28,8 +23,8 @@ const UsernameItem =  ({
                     onFocus={() => setIsActive({ name: true })}
                     onBlur={() => setIsActive({ name: false })}
 
-                    ref={register({ 
-                        required: {value: true, message: 'Please input username!'}
+                    ref={register({
+                        required: { value: true, message: 'Please input username!' }
                     })}
                 />
             </div>
@@ -40,4 +35,4 @@ const UsernameItem =  ({
     )
 }
 
-export default UsernameItem
+export default UsernameItem;

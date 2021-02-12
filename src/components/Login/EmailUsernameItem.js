@@ -1,11 +1,6 @@
 import React from 'react';
 
-const EmailUsernameItem = ({
-    setIsActive,
-    isActive,
-    register,
-    errors
-}) => {
+const EmailUsernameItem = ({ setIsActive, isActive, register, errors }) => {
     return (
         <div className='login__item'>
 

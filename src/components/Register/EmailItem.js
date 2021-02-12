@@ -1,11 +1,6 @@
 import React from 'react'
 
-const EmailItem = ({
-    setIsActive,
-    isActive,
-    register,
-    errors
-}) => {
+const EmailItem = ({ setIsActive, isActive, register, errors }) => {
     return (
         <div className='register__item'>
             <div className={`register__input-with-icon ${isActive.email && 'register__input-with-icon--active'}`}>
@@ -26,7 +21,7 @@ const EmailItem = ({
                     placeholder='Enter email'
                     onFocus={() => setIsActive({ email: true })}
                     onBlur={() => setIsActive({ email: false })}
-                    
+
                     ref={register({ required: { value: true, message: "Please input email!" } })}
                 />
             </div>

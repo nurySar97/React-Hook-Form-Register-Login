@@ -11,7 +11,6 @@ export default function Default() {
     const [isActive, setIsActive] = useState({})
     let onHandleSubmit = formData => console.log(formData)
 
-
     return (
         <div className='register' style={{ marginTop: 100 }}>
             <form

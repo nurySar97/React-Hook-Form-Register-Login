@@ -23,4 +23,4 @@ const AcceptCondition = ({ register, errors }) => {
     )
 }
 
-export default AcceptCondition
+export default AcceptCondition;
