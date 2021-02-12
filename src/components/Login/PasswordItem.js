@@ -9,32 +9,32 @@ const PasswordItem = ({
     return (
         <div className='login__item'>
             <div className={`login__input-with-icon ${isActive.password && 'login__input-with-icon--active'}`}>
+
                 <label
                     className={`login__label ${isActive.password && 'login__label--active'}`}
-                    data-label='Password'
-                    htmlFor="password"
+                    data-label='Enter password'
+                    htmlFor='login-password'
                 >
-                    <i className="fas fa-key"></i>
+                    <i className='fas fa-key'></i>
                 </label>
+
                 <input
                     className='login__input'
+                    id='login-password'
                     type='password'
                     name='password'
-                    ref={register({ required: true })}
-                    placeholder='Password'
+                    placeholder='Enter password'
                     onFocus={() => setIsActive({ password: true })}
                     onBlur={() => setIsActive({ password: false })}
+
+                    ref={register({
+                        required: { value: true, message: 'Please input password!' }
+                    })}
                 />
             </div>
-            {
-                errors.password
-                    ?
-                    <div className='login__input-error'>
-                        Please input your password!
-                    </div>
-                    :
-                    null
-            }
+
+            {errors.password ? <div className='login__input-error'>{errors.password.message}</div> : null}
+
         </div>
     )
 }

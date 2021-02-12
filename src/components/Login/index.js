@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import './style.css';
 import EmailUsernameItem from './EmailUsernameItem';
 import PasswordItem from './PasswordItem';
-import './style.css'
+
 
 export default function Default() {
     const { register, handleSubmit, errors } = useForm({})
-    const [isActive, setIsActive] = useState({
-        name: false,
-        password: false
-    })
+    const [isActive, setIsActive] = useState({})
+    
     let onHandleSubmit = formData => {
         console.log(formData)
     }
@@ -20,7 +19,7 @@ export default function Default() {
                 autoComplete='off'
                 onSubmit={handleSubmit(onHandleSubmit)}
             >
-                
+
                 <EmailUsernameItem
                     setIsActive={setIsActive}
                     errors={errors}

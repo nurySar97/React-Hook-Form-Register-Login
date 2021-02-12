@@ -2,27 +2,30 @@
     display: block;
 }
 
-
 .register__form {
     background-color: rgba(27, 34, 51);
-    max-width: 400px;
-    min-height: 500px;
     margin: 0 auto;
+
     padding: 2rem;
     border-radius: 1.25rem;
+    max-width: 400px;
+    min-height: 500px;
 }
-
 
 .register__item {
     position: relative;
     padding-bottom: 2.5rem;
 }
 
-
 .register__item--forgot {
     text-align: left;
 }
 
+.register__item--accept {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 
 .register__input-with-icon {
     display: flex;
@@ -34,65 +37,80 @@
     border-radius: .5rem;
 }
 
-
 .register__input-with-icon--active {
     border: 1px solid #1890ff;
 }
-
 
 .register__label {
     display:inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 2em;
-    font-size: 1rem;
     margin: 0;
     padding: 0;
     background-color: transparent;
     color: white;
-}
+    cursor: pointer;
 
+    width: 30px;
+    height: 2em;
+    font-size: 1rem;
+}
 
 .register__label::before {
     content: attr(data-label);
     position: absolute;
     background-color: rgba(27, 34, 51,.9);
     transition: all .35s linear;
-    top: -10%;
-    left: 37px;
     color: rgba(85,101,126,.5);
     opacity: 0;
-}
 
+    top: -10%;
+    left: 37px;
+}
 
 .register__label--active::before {
     opacity: 1;
 }
-
 
 .register__input {
     display: block;
     width: calc(100% - 30px);
     border: 0;
     outline: none;
-    font-size: 1rem;
-    height: 2em;
     background: transparent;
     color: white;
+
+    font-size: 1rem;
+    height: 2em;
 }
 
+.register__input--accept {
+    display: inline;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+    width: 20px;
+    height: 20px;
+}
+
+.register__accept-label {
+    width: calc(100% - 20px);
+    text-align: left;
+    color: rgb(177, 186, 211);
+    cursor: pointer;
+
+    margin-left: 1em;
+}
 
 .register__input::placeholder {
     color: rgba(85,101,126,.5);
     transition: all .35s linear;
 }
 
-
 .register__input:focus::placeholder {
     color: transparent;
 }
-
 
 .register__input-error {
     position:absolute;
@@ -100,48 +118,48 @@
     right:0;
     margin-left:auto;
     margin-right:auto;
+    z-index: 1;
+    background: white;
+
     bottom: .5em;
     font-size: 1rem;
-    background: white;
     padding: .3em;
     border-radius: .3em;
     max-width: 250px;
-    z-index: 1;
 }
-
 
 .register__input-error::before {
     content: "";
     display: block;
-    width: 20px;
-    height: 20px;
     position: absolute;
     background-color: white;
     z-index: -1;
-    top: 0;
-    left: 10%;
     transform: rotate(45deg);
+    
+    top: 0;
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    
 }
-
-
 
 .register__submit-button {
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: 300px;
     background-color: #fa305c;
     color: white;
     cursor: pointer;
     font-weight: 700;
-    font-size: 18px;
-    border: 0;
-    border-radius: .4em;
-    outline: none;
-    height: 2.5em;
     transition: all .35s linear;
-}
+    outline: none;
+    border: 0;
 
+    max-width: 300px;
+    font-size: 18px;
+    border-radius: .4em;
+    height: 2.5em;
+}
 
 .register__submit-button:hover {
     box-shadow: 0em 0.1em 0.5em #fa305c;

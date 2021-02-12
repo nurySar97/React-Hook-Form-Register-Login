@@ -9,32 +9,30 @@ const EmailItem = ({
     return (
         <div className='register__item'>
             <div className={`register__input-with-icon ${isActive.email && 'register__input-with-icon--active'}`}>
+
                 <label
                     className={`register__label ${isActive.email && 'register__label--active'}`}
-                    data-label='Enter your email'
-                    htmlFor="name"
+                    data-label='Enter email'
+                    htmlFor="register-email"
                 >
-                    <i className="fas fa-user"></i>
+                    <i className="fas fa-envelope"></i>
                 </label>
+
                 <input
                     className='register__input'
+                    id='register-email'
                     type='email'
                     name='email'
-                    ref={register({ required: true })}
-                    placeholder='Enter your email'
+                    placeholder='Enter email'
                     onFocus={() => setIsActive({ email: true })}
                     onBlur={() => setIsActive({ email: false })}
+                    
+                    ref={register({ required: { value: true, message: "Please input email!" } })}
                 />
             </div>
-            {
-                errors.email
-                    ?
-                    <div className='register__input-error'>
-                        Please input your Name!
-                    </div>
-                    :
-                    null
-            }
+
+            { errors.email ? <div className='register__input-error'>{errors.email.message}</div> : null}
+
         </div>
     )
 }
